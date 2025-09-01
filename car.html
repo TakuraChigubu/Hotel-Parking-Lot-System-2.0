@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A & T Parking Lot System</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+    <header>
+        <h1>A & T Parking Lot System</h1>
+    </header>
+
+    <!-- Media Content Section (Images/Videos) -->
+    <section id="media-content">
+        <h2>Welcome to A & T Parking Lot System</h2>
+        <p>Check out the parking features!</p>
+        <img src="parking-lot.jpg" alt="Parking Lot" />
+        <video autoplay>
+            <source src="How Smart Parking Systems Works.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="auth-section">
+        <h2>Register</h2>
+        <label for="reg-username">Username:</label>
+        <input type="text" id="reg-username" placeholder="Enter username">
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" placeholder="Enter password">
+        <label for="reg-id">ID Number:</label>
+        <input type="text" id="reg-id" placeholder="Enter ID number">
+        <label for="reg-phone">Phone Number:</label>
+        <input type="text" id="reg-phone" placeholder="Enter phone number">
+        <button onclick="registerUser()">Register</button>
+        <p id="register-message"></p>
+    </section>
+
+    <!-- Login Form (Initially hidden) -->
+    <section id="login" class="auth-section" style="display: none;">
+        <h2>Login</h2>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" placeholder="Enter username">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter password">
+        <button onclick="loginUser()">Login</button>
+        <p id="login-message"></p>
+    </section>
+
+    <!-- Dashboard Section (hidden until logged in) -->
+    <section id="dashboard" class="dashboard-section" style="display: none;">
+        <h2>Dashboard</h2>
+        <div class="dashboard-options">
+            <div class="option" onclick="showBooking()">Book Parking</div>
+            <div class="option" onclick="showPayments()">Payments</div>
+            <div class="option" onclick="showReports()">Reports</div>
+            <div class="option" onclick="showProfile()">Profile</div>
+        </div>
+        <button onclick="logoutUser()">Logout</button>
+    </section>
+
+    <!-- Parking Lot Management Section (Initially hidden) -->
+    <section id="parking-management" class="parking-section" style="display:none;">
+        <h2>Parking Lot Management</h2>
+        <div id="parking-spots">
+            <!-- Parking spots will be generated here -->
+        </div>
+        <h3>Parking Analytics</h3>
+        <div id="analytics">
+            <p>Total Spots: <span id="total-spots"></span></p>
+            <p>Booked Spots: <span id="booked-spots"></span></p>
+            <p>Available Spots: <span id="available-spots"></span></p>
+        </div>
+        <button onclick="logoutUser()">Logout</button>
+    </section>
+
+    <!-- Payments Section -->
+    <section id="payments" class="payment-section" style="display: none;">
+        <h2>Payments</h2>
+        <p>Manage your parking payments here.</p>
+        <!-- Payment content goes here -->
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section" style="display: none;">
+        <h2>Your Profile</h2>
+        <p>Manage your profile information here.</p>
+        <!-- Profile content goes here -->
+    </section>
+
+    <script src="car.js"></script>
+</body>
+</html>

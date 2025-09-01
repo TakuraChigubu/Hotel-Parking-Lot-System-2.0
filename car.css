@@ -1,0 +1,165 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #0066cc;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.dashboard-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.option {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.option:hover {
+    background-color: #ddd;
+    transform: translateY(-5px);
+}
+
+/* Other sections (like Parking, Payments, etc.) */
+.auth-section, .parking-section, .payment-section, .profile-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+label, p {
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #004b99;
+}
+
+/* Parking Section */
+#parking-spots {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 20px;
+}
+
+.parking-spot {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.parking-spot:hover {
+    background-color: #ddd;
+    transform: translateY(-5px);
+}
+
+.parking-spot.booked {
+    background-color: #e74c3c;
+    color: white;
+    cursor: not-allowed;
+}
+
+#analytics {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#login-message, #register-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Media Content Section */
+#media-content {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#media-content img, #media-content video {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
